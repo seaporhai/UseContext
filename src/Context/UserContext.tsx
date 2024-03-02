@@ -34,13 +34,7 @@ export const UserContexts = createContext<UserContextProps>({
 });
 
 const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [users, setUsers] = useState<UserModel[]>([
-    {
-      id: "1",
-      username: "Chek Romlek Tnam",
-      profile: "/Picasso.jpg",
-    },
-  ]);
+  const [users, setUsers] = useState<UserModel[]>([]);
 
   const [selectCard, setSelectCard] = useState(""); //store id of selected card
 
@@ -66,8 +60,6 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
     return myuser;
 
   };
-
-
 
 
   const handleDeleteUser = (id: string) => {

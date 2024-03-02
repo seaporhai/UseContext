@@ -34,8 +34,8 @@ const Card: React.FC<CardProps> = ({ id, name, image }: CardProps) => {
       }}
       className={
         selectCard === id
-          ? "flex justify-between items-start w-[420px] bg-green-500 text-white  m-auto mt-5 p-2 border border-[#954dd3] rounded-lg shadow-xl "
-          : "flex justify-between items-start w-[420px]   m-auto mt-5 p-2 border border-[#000000] rounded-lg hover:bg-black shadow-xl"
+          ? "flex justify-between items-center w-[800px] ml-[300px] bg-[#929292] text-white  mt-5 p-2 border border-[#954dd3] rounded-lg shadow-xl "
+          : "flex justify-between items-start w-[600px] bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600  m-auto mt-5 ml-[400px] p-2 border border-[#5a5858] rounded-lg hover:ml-[300px] hover:w-[800px] shadow-xl"
       }
     >
       <div className="flex flex-row justify-center gap-2 ">
@@ -66,7 +66,9 @@ const Card: React.FC<CardProps> = ({ id, name, image }: CardProps) => {
           onClick={(e) => {
             handleDeleteUser(id)
             e.stopPropagation()
-          }}>
+          }}
+          className="bg-red-600 rounded-md w-[60px] "
+        >
           close
         </button>
       </div>

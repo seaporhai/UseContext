@@ -52,12 +52,12 @@ const FormUpdate = () => {
   };
 
   return (
-    <form onSubmit={handleOnSubmit}>
+    <form className=" flex flex-col items-center" onSubmit={handleOnSubmit}>
       <label htmlFor="name" className="text-gray-500">
         Name:
       </label>
       <input
-        className="text-black border rounded-md border-black m-2 focus:ring-2 outline-none px-2"
+        className="text-black border  w-[300px] rounded-md border-black m-2 focus:ring-2 outline-none px-2"
         type="text"
         id="name"
         name="username"
@@ -72,11 +72,11 @@ const FormUpdate = () => {
       </label>
       {selectedUser.profile ? (
         <>
-          <div className="relative">
+          <div className="relative w-[200px] mr-[260px] ">
             <img src={selectedUser.profile} alt="profile" />
           </div>
           <button
-            className="py-2 px-4 rounded-xl bg-red-500 mt-2"
+            className="py-2 px-4 rounded-xl bg-red-500 mt-7   "
             onClick={handleRemoveFile}
           >
             Delete image
@@ -84,7 +84,7 @@ const FormUpdate = () => {
         </>
       ) : (
         <input
-          className="border rounded-md border-black m-2"
+          className="border rounded-md border-[red] m-2"
           type="file"
           accept="image/*"
           name="profile"
@@ -93,8 +93,8 @@ const FormUpdate = () => {
       )}
       <br />
 
-      <div className="flex flex-row gap-2">
-        <button className="bg-blue-400 px-4 py-2 rounded-xl mt-4">
+      <div>
+        <button className="bg-green-400 px-4 py-2 rounded-xl  w-32 mt-8  ">
           Update
         </button>
       </div>

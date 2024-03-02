@@ -35,10 +35,10 @@ const MyComponent = () => {
   const { selectCard } = useContext(UserContexts);
 
   return (
-    <div className="inline-block items-center justify-center mx-auto w-auto">
+    <div className="inline-block  items-center justify-center mx-auto w-auto">
       <SearchInput></SearchInput>
-      <CardList />
-      <Modal>{selectCard ? <FormUpdate /> : <ValidationForm />}</Modal>
+      <div className="ml-[190px]"> <CardList /></div>
+      <Modal >{selectCard ? <FormUpdate /> : <ValidationForm />}</Modal>
     </div>
   );
 };
