@@ -33,11 +33,12 @@ export default function Home() {
 
 const MyComponent = () => {
   const { selectCard } = useContext(UserContexts);
+  const [search, setSearch] = useState("");
 
   return (
     <div className="inline-block  items-center justify-center mx-auto w-auto">
-      <SearchInput></SearchInput>
-      <div className="ml-[190px]"> <CardList /></div>
+      <SearchInput search={search} setSearch={setSearch} ></SearchInput>
+      <div className="ml-[190px]"> <CardList search={ search} /></div>
       <Modal >{selectCard ? <FormUpdate /> : <ValidationForm />}</Modal>
     </div>
   );

@@ -3,6 +3,7 @@ import { getLocalStorage, setLocalStorage } from "@/utils/localstrorage";
 import React, { createContext, useState, ReactNode, Dispatch, SetStateAction, useEffect } from "react";
 
 export interface UserModel {
+  name: any;
   id: string;
   username: string;
   profile: string | null;

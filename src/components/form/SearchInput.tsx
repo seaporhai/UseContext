@@ -1,20 +1,25 @@
-"use client";
-import React, { useState } from "react";
+// Search.js
+import React from "react";
+import { Input } from ".."
 
-const SearchInput = () => {
-  const [search, setSearch] = useState("");
+interface SearchProps {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+}
+const SearchInput: React.FC<SearchProps> = ({ search, setSearch }) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
 
   return (
-    <div className=" mt-5  flex justify-center fixed ">
-      <input
-        type="text"
-        className="outline-none border-2 w-[300px] h-[40px] p-6 rounded-md focus:ring-green-200"
-        placeholder="Enter name"
-        onChange={(e) => setSearch(e.target.value)}
+    <div className="flex justify-center items-center">
+      <Input
+        className="w-full h-[50px] text-white max-w-md bg-[#5a5252]"
+        size="md"
+        placeholder="Search..."
+        value={search}
+        onChange={handleSearchChange}
       />
-      <button className=" px-4 py-3 text-white bg-green-400 rounded-md ml-2 hover:bg-green-600">
-        Search
-      </button>
     </div>
   );
 };

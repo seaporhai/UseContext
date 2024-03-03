@@ -34,8 +34,8 @@ const Card: React.FC<CardProps> = ({ id, name, image }: CardProps) => {
       }}
       className={
         selectCard === id
-          ? "flex justify-between items-center w-[800px] ml-[300px] bg-[#929292] text-white  mt-5 p-2 border border-[#954dd3] rounded-lg shadow-xl "
-          : "flex justify-between items-start w-[600px] bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600  m-auto mt-5 ml-[400px] p-2 border border-[#5a5858] rounded-lg hover:ml-[300px] hover:w-[800px] shadow-xl"
+          ? "flex justify-between items-center w-[600px] ml-[300px] bg-[#929292] text-white  mt-5 p-2 border border-[#954dd3] rounded-lg shadow-xl "
+          : "flex justify-between items-start w-[600px] bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600  m-auto mt-5  p-2 border border-[#5a5858] rounded-lg shadow-xl"
       }
     >
       <div className="flex flex-row justify-center gap-2 ">
